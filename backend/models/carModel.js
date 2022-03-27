@@ -11,10 +11,10 @@ const carSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please add a model"],
     },
-    // image: {
-    //   data: Buffer,
-    //   contentType: String,
-    // },
+    imageURL: {
+      type: String,
+      required: [true, "Please add an image URL"],
+    },
     description: {
       type: String,
       required: [true, "Please add a description"],

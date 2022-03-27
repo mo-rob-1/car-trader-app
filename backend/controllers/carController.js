@@ -36,8 +36,8 @@ const getAllCars = asyncHandler(async (req, res) => {
 // @route POST /api/cars
 // @access Private
 const addCar = asyncHandler(async (req, res) => {
-  const { model, description, price, location, phoneNumber, email } = req.body;
-  if (!model || !description || !price || !location || !phoneNumber || !email) {
+  const { model, description, price, location, phoneNumber, email, imageURL } = req.body;
+  if (!model || !description || !price || !location || !phoneNumber || !email || !imageURL) {
     res.status(400);
     throw new Error("Please enter all fields");
   }
@@ -53,6 +53,7 @@ const addCar = asyncHandler(async (req, res) => {
     price,
     location,
     phoneNumber,
+    imageURL,
     email,
     user: req.user.id,
   });
