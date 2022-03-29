@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import CarListing from "./pages/CarListing";
 import CarDetails from "./pages/CarDetails";
 import Wishlist from "./pages/Wishlist";
@@ -25,6 +27,7 @@ function App() {
           <Footer />
         </div>
       </Router>
+      <ToastContainer />
     </>
   );
 }
