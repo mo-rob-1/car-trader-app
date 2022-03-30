@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
           <Routes>
             <Route path="/" element={<CarListing />} />
             <Route path="/car/:id" element={<CarDetails />} />
-            <Route path="/addcar" element={<AddCar />} />
-            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/add-car" element={<PrivateRoute />}>
+              <Route path="/add-car" element={<AddCar />} />
+            </Route>
+            <Route path="/wishlist" element={<PrivateRoute />}>
+              <Route path="/wishlist" element={<Wishlist />} />
+            </Route>
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
           </Routes>
