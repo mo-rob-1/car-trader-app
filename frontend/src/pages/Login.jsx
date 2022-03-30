@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { login, reset } from "../features/auth/authSlice";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -8,9 +12,23 @@ function Login() {
 
   const { email, password } = formData;
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    // Redirect when user is logged in
+    if (isSuccess || user) {
+      navigate("/");
+    }
+
+    dispatch(reset());
+  }, [isError, isSuccess, user, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -18,6 +36,21 @@ function Login() {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const userData = {
+      email,
+      password,
+    };
+
+    dispatch(login(userData));
+  };
+
+  if (isLoading) {
+    return <h3>Loading...</h3>;
+  }
 
   return (
     <>
