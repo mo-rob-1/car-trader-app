@@ -28,6 +28,11 @@ function Header() {
               </button>
             </li>
             <li>
+              <button className="btn">
+                <Link to="/mycars">My Cars</Link>
+              </button>
+            </li>
+            <li>
               <button className="btn" onClick={onLogout}>
                 Logout
               </button>
