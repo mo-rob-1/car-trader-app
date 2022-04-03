@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CarListing from "./pages/CarListing";
-import CarDetails from "./pages/CarDetails";
+import CarInfo from "./pages/CarInfo";
+import MyCars from "./pages/MyCars";
 import Wishlist from "./pages/Wishlist";
 import AddCar from "./pages/AddCar";
 import Register from "./pages/Register";
@@ -19,9 +20,12 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<CarListing />} />
-            <Route path="/car/:id" element={<CarDetails />} />
+            <Route path="/cars/:carId" element={<CarInfo />} />
             <Route path="/add-car" element={<PrivateRoute />}>
               <Route path="/add-car" element={<AddCar />} />
+            </Route>
+            <Route path="/mycars" element={<PrivateRoute />}>
+              <Route path="/mycars" element={<MyCars />} />
             </Route>
             <Route path="/wishlist" element={<PrivateRoute />}>
               <Route path="/wishlist" element={<Wishlist />} />
