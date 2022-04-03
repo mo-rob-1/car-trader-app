@@ -29,14 +29,8 @@ const getAllCars = async (token) => {
 };
 
 // Get a car by id
-const getUserCar = async (carId, token) => {
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
-
-  const response = await axios.get(API_URL + carId, config);
+const getUserCar = async (carId) => {
+  const response = await axios.get(API_URL + carId);
 
   return response.data;
 };
@@ -54,7 +48,20 @@ const getUserCars = async (token) => {
   return response.data;
 };
 
-// Update a car
+// // Update a car
+// const updateCar = async (carId, token) => {
+//   const config = {
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//   };
+
+//   const response = await axios.put(API_URL + carId, config);
+
+//   return response.data;
+// };
+
+// Update car status
 const updateCar = async (carId, token) => {
   const config = {
     headers: {
@@ -62,7 +69,7 @@ const updateCar = async (carId, token) => {
     },
   };
 
-  const response = await axios.put(API_URL + carId, config);
+  const response = await axios.put(API_URL + carId, { status: "Sold" }, config);
 
   return response.data;
 };

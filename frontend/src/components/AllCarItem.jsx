@@ -1,8 +1,11 @@
 function AllCarItem({ car }) {
   return (
     <div class="card w-96 bg-base-100 shadow-xl my-5">
+      <figure>
+        {" "}
+        <img src={car.imageURL} alt={car.model} className="w-full" />
+      </figure>
       <div class="card-body">
-        <img src={car.imageURL} alt="car" class="w-full" />
         <h2 class="card-title">{car.model}</h2>
         <p>Desc: {car.description}</p>
         <p>Price: £{car.price}</p>

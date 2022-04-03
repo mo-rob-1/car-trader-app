@@ -7,21 +7,23 @@ const Car = require("../models/carModel");
 // @access Private
 const getUserCar = asyncHandler(async (req, res) => {
   // Get user using the ID in the JWT
-  const user = await User.findById(req.user.id);
-  if (!user) {
-    res.status(401);
-    throw new Error("User not found");
-  }
-  const car = await Car.findById(req.params.id);
-  if (!car) {
-    res.status(404);
-    throw new Error("Car not found");
-  }
-  if (car.user.toString() !== req.user.id) {
-    res.status(401);
-    throw new Error("Not authorized");
-  }
-  res.status(200).json(car);
+  // const user = await User.findById(req.user.id);
+  // if (!user) {
+  //   res.status(401);
+  //   throw new Error("User not found");
+  // }
+  // const car = await Car.findById(req.params.id);
+  // if (!car) {
+  //   res.status(404);
+  //   throw new Error("Car not found");
+  // }
+  // if (car.user.toString() !== req.user.id) {
+  //   res.status(401);
+  //   throw new Error("Not authorized");
+  // }
+  // res.status(200).json(car);
+  const userCar = await Car.findById(req.params.id);
+  res.status(200).json(userCar);
 });
 
 // @desc  Get all cars from every users
@@ -36,8 +38,8 @@ const getAllCars = asyncHandler(async (req, res) => {
 // @route POST /api/cars
 // @access Private
 const addCar = asyncHandler(async (req, res) => {
-  const { model, description, price, location, phoneNumber, email, imageURL } = req.body;
-  if (!model || !description || !price || !location || !phoneNumber || !email || !imageURL) {
+  const { model, description, price, location, phoneNumber, email, imageURL, region } = req.body;
+  if (!model || !description || !price || !location || !phoneNumber || !email || !imageURL || !region) {
     res.status(400);
     throw new Error("Please enter all fields");
   }
@@ -55,6 +57,8 @@ const addCar = asyncHandler(async (req, res) => {
     phoneNumber,
     imageURL,
     email,
+    region,
+    status: "Available",
     user: req.user.id,
   });
   res.status(201).json(car);
@@ -105,23 +109,48 @@ const updateCar = asyncHandler(async (req, res) => {
 // @route DELETE /api/cars/:id
 // @access Private
 const deleteCar = asyncHandler(async (req, res) => {
-  // Get user using the ID in the JWT
-  const user = await User.findById(req.user.id);
-  if (!user) {
+  // // Get user using the ID in the JWT
+  // const user = await User.findById(req.user.id);
+  // if (!user) {
+  //   res.status(401);
+  //   throw new Error("User not found");
+  // }
+  // const car = await Car.findById(req.params.id);
+  // if (!car) {
+  //   res.status(404);
+  //   throw new Error("Car not found");
+  // }
+  // if (car.user.toString() !== req.user.id) {
+  //   res.status(401);
+  //   throw new Error("Not authorized");
+  // }
+  // await car.remove();
+  // res.status(200).json({ success: true });
+
+  const car = await Car.findById(req.params.id);
+
+  if (!car) {
+    res.status(400);
+    throw new Error("Todo not found");
+  }
+
+  // Check if user is owner of todo
+  if (!req.user) {
     res.status(401);
     throw new Error("User not found");
   }
-  const car = await Car.findById(req.params.id);
-  if (!car) {
-    res.status(404);
-    throw new Error("Car not found");
-  }
+
+  // Ensure user do not update other users todo
   if (car.user.toString() !== req.user.id) {
     res.status(401);
-    throw new Error("Not authorized");
+    throw new Error("User not authorized");
   }
+
   await car.remove();
-  res.status(200).json({ success: true });
+
+  res.status(200).json({
+    id: req.params.id,
+  });
 });
 
 module.exports = { addCar, getAllCars, getUserCars, getUserCar, updateCar, deleteCar };

@@ -27,6 +27,21 @@ const carSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please add a location"],
     },
+    region: {
+      type: String,
+      required: [true, "Please select a region"],
+      enum: [
+        "London",
+        "North West",
+        "North East",
+        "Yorkshire",
+        "Midlands",
+        "South East",
+        "South West",
+        "Wales",
+        "Scotland",
+      ],
+    },
     phoneNumber: {
       type: Number,
       required: [true, "Please add a phone number"],
@@ -34,6 +49,12 @@ const carSchema = new mongoose.Schema(
     email: {
       type: String,
       required: [true, "Please add an email"],
+    },
+    status: {
+      type: String,
+      required: [true, "Please add a status"],
+      enum: ["Available", "Sold"],
+      default: "Available",
     },
   },
   {

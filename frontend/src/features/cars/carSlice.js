@@ -49,16 +49,17 @@ export const getUserCars = createAsyncThunk("cars/getUserCars", async (_, thunkA
 });
 
 // Fetch a car from database
-export const getUserCar = createAsyncThunk("cars/getUserCar", async (carId, thunkAPI) => {
-  try {
-    const token = thunkAPI.getState().auth.user.token;
-    return await carService.getUserCar(carId, token);
-  } catch (error) {
-    const message =
-      (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
+export const getUserCar = createAsyncThunk("cars/getUserCar", async (carId) => {
+  // try {
+  //   const token = thunkAPI.getState().auth.user.token;
+  //   return await carService.getUserCar(carId, token);
+  // } catch (error) {
+  //   const message =
+  //     (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
 
-    return thunkAPI.rejectWithValue(message);
-  }
+  //   return thunkAPI.rejectWithValue(message);
+  // }
+  return carService.getUserCar(carId);
 });
 
 // Update a car
@@ -116,6 +117,45 @@ export const carSlice = createSlice({
         state.cars = action.payload;
       })
       .addCase(getAllCars.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(getUserCars.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getUserCars.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.cars = action.payload;
+      })
+      .addCase(getUserCars.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(getUserCar.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getUserCar.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.car = action.payload;
+      })
+      .addCase(getUserCar.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(deleteCar.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(deleteCar.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.cars = state.cars.filter((car) => car._id !== action.payload.id);
+      })
+      .addCase(deleteCar.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

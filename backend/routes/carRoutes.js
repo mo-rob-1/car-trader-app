@@ -5,6 +5,6 @@ const { protect } = require("../middleware/authMiddleware");
 
 router.route("/mycars").get(protect, getUserCars);
 router.route("/").post(protect, addCar).get(getAllCars);
-router.route("/:id").delete(protect, deleteCar).put(protect, updateCar).get(protect, getUserCar);
+router.route("/:id").delete(protect, deleteCar).put(protect, updateCar).get(getUserCar);
 
 module.exports = router;

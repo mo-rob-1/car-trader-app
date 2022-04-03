@@ -34,6 +34,15 @@ function CarInfo() {
           <p>Location: {car.location}</p>
           <p>Number: {car.phoneNumber}</p>
           <p>Email: {car.email}</p>
+          {car.status === "Available" ? (
+            <div className="bg-green-600 w-fit px-5 py-3 rounded-md my-3">
+              <p className="text-white font-bold">Available</p>
+            </div>
+          ) : (
+            <div className="bg-red-600 w-fit px-5 py-3 rounded-md my-3">
+              <p className="text-white font-bold">Sold</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

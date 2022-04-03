@@ -17,6 +17,7 @@ function AddCar() {
   const [description, setDescription] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [location, setLocation] = useState("");
+  const [region, setRegion] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ function AddCar() {
         price,
         imageURL,
         location,
+        region,
         phoneNumber,
         email,
       })
@@ -168,6 +170,31 @@ function AddCar() {
               onChange={(e) => setLocation(e.target.value)}
               required
             />
+          </div>
+
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">Pick a region</span>
+            </label>
+            <select
+              className="select select-bordered"
+              id="region"
+              name="region"
+              value={region}
+              onChange={(e) => setRegion(e.target.value)}
+              required
+            >
+              <option disabled>Add a region</option>
+              <option value="London">London</option>
+              <option value="North West">North West</option>
+              <option value="North East">North East</option>
+              <option value="Yorkshire">Yorkshire</option>
+              <option value="Midlands">Midlands</option>
+              <option value="South East">South East</option>
+              <option value="South West">South West</option>
+              <option value="Wales">Wales</option>
+              <option value="Scotland">Scotland</option>
+            </select>
           </div>
 
           <div>
