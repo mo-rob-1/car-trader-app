@@ -63,7 +63,7 @@ function CarListing() {
       <input
         className="input input-bordered w-full max-w-xs"
         type="text"
-        placeholder="Search..."
+        placeholder="Search for a car..."
         onChange={(e) => {
           setSearch(e.target.value);
         }}
