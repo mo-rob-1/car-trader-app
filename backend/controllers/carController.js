@@ -38,8 +38,44 @@ const getAllCars = asyncHandler(async (req, res) => {
 // @route POST /api/cars
 // @access Private
 const addCar = asyncHandler(async (req, res) => {
-  const { model, description, price, location, phoneNumber, email, imageURL, region } = req.body;
-  if (!model || !description || !price || !location || !phoneNumber || !email || !imageURL || !region) {
+  const {
+    model,
+    description,
+    price,
+    location,
+    phoneNumber,
+    email,
+    imageURL,
+    region,
+    make,
+    fuelType,
+    bodyType,
+    transmission,
+    doors,
+    seats,
+    mileage,
+    colour,
+    engineSize,
+  } = req.body;
+  if (
+    !model ||
+    !description ||
+    !price ||
+    !location ||
+    !phoneNumber ||
+    !email ||
+    !imageURL ||
+    !region ||
+    !make ||
+    !fuelType ||
+    !bodyType ||
+    !transmission ||
+    !doors ||
+    !seats ||
+    !mileage ||
+    !colour ||
+    !engineSize
+  ) {
     res.status(400);
     throw new Error("Please enter all fields");
   }
@@ -56,8 +92,17 @@ const addCar = asyncHandler(async (req, res) => {
     location,
     phoneNumber,
     imageURL,
+    fuelType,
+    bodyType,
     email,
+    make,
     region,
+    doors,
+    seats,
+    transmission,
+    mileage,
+    colour,
+    engineSize,
     status: "Available",
     user: req.user.id,
   });
