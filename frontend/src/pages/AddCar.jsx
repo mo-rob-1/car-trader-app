@@ -197,19 +197,19 @@ function AddCar() {
               <option value="" disabled>
                 Select the engine size
               </option>
-              <option value="1.0">1.0 litre</option>
+              <option value="1">1.0 litre</option>
               <option value="1.2">1.2 litres</option>
               <option value="1.4">1.4 litres</option>
               <option value="1.6">1.6 litres</option>
               <option value="1.8">1.8 litres</option>
-              <option value="2.0">2.0 litres</option>
+              <option value="2">2.0 litres</option>
               <option value="2.2">2.2 litres</option>
               <option value="2.4">2.4 litres</option>
               <option value="2.6">2.6 litres</option>
               <option value="2.8">2.8 litres</option>
-              <option value="3.0">3.0 litres</option>
-              <option value="4.0">4.0 litres</option>
-              <option value="5.0">5.0 litres</option>
+              <option value="3">3.0 litres</option>
+              <option value="4">4.0 litres</option>
+              <option value="5">5.0 litres</option>
             </select>
           </div>
 
@@ -238,6 +238,7 @@ function AddCar() {
               <option value="Convertible">Convertible</option>
               <option value="Supercar">Supercar</option>
               <option value="Sports">Sports</option>
+              <option value="Luxury">Luxury</option>
               <option value="Pickup">Pickup</option>
               <option value="Van">Van</option>
             </select>
