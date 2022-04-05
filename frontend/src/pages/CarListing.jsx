@@ -11,6 +11,13 @@ function CarListing() {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
   const [status, setStatus] = useState("");
+  const [gearbox, setGearbox] = useState("");
+  const [colour, setColour] = useState("");
+  const [bodyType, setBodyType] = useState("");
+  const [fuelType, setFuelType] = useState("");
+  const [engineSize, setEngineSize] = useState("");
+  const [doors, setDoors] = useState("");
+  const [seats, setSeats] = useState("");
   const [visible, setVisible] = useState(3);
 
   const API_URL = "/api/cars/";
@@ -109,11 +116,128 @@ function CarListing() {
         <option value="Available">Available</option>
       </select>
 
+      <select
+        onChange={(e) => {
+          setColour(e.target.value);
+        }}
+      >
+        <option value="">Filter by Colour</option>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Purple">Purple</option>
+        <option value="Orange">Orange</option>
+        <option value="Pink">Pink</option>
+        <option value="Brown">Brown</option>
+        <option value="Grey">Grey</option>
+        <option value="Silver">Silver</option>
+        <option value="Gold">Gold</option>
+        <option value="Bronze">Bronze</option>
+        <option value="Multicolour">Multicolour</option>
+        <option value="Platinum">Platinum</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <select
+        onChange={(e) => {
+          setBodyType(e.target.value);
+        }}
+      >
+        <option value="">Filter by body type</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Hatchback">Hatchback</option>
+        <option value="SUV">SUV</option>
+        <option value="MPV">MPV</option>
+        <option value="Coupe">Coupe</option>
+        <option value="Saloon">Saloon</option>
+        <option value="Estate">Estate</option>
+        <option value="Convertible">Convertible</option>
+        <option value="Supercar">Supercar</option>
+        <option value="Sports">Sports</option>
+        <option value="Luxury">Luxury</option>
+        <option value="Pickup">Pickup</option>
+        <option value="Van">Van</option>
+      </select>
+
+      <select
+        onChange={(e) => {
+          setGearbox(e.target.value);
+        }}
+      >
+        <option value="">Filter by gearbox type</option>
+        <option value="Manual">Manual</option>
+        <option value="Automatic">Automatic</option>
+      </select>
+
+      <select
+        onChange={(e) => {
+          setFuelType(e.target.value);
+        }}
+      >
+        <option value="">Filter by fuel type</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Electric">Electric</option>
+        <option value="Hybrid">Hybrid</option>
+      </select>
+
+      <select
+        onChange={(e) => {
+          setDoors(e.target.value);
+        }}
+      >
+        <option value="">Filter by number of doors</option>
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+
+      <select
+        onChange={(e) => {
+          setSeats(e.target.value);
+        }}
+      >
+        <option value="">Filter by number of seats</option>
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+
+      <select
+        onChange={(e) => {
+          setEngineSize(e.target.value);
+        }}
+      >
+        <option value="">Filter by engine size</option>
+        <option value="1">1.0 litre</option>
+        <option value="1.2">1.2 litres</option>
+        <option value="1.4">1.4 litres</option>
+        <option value="1.6">1.6 litres</option>
+        <option value="1.8">1.8 litres</option>
+        <option value="2">2.0 litres</option>
+        <option value="2.2">2.2 litres</option>
+        <option value="2.4">2.4 litres</option>
+        <option value="2.6">2.6 litres</option>
+        <option value="2.8">2.8 litres</option>
+        <option value="3">3.0 litres</option>
+        <option value="4">4.0 litres</option>
+        <option value="5">5.0 litres</option>
+      </select>
+
       {carList
         .filter((car) => {
           if (search === "") {
             return car;
-          } else if (car.model.toLowerCase().includes(search.toLowerCase())) {
+          } else if (
+            car.model.toLowerCase().includes(search.toLowerCase()) ||
+            car.make.toLowerCase().includes(search.toLowerCase())
+          ) {
             return car;
           }
           return false;
@@ -134,6 +258,62 @@ function CarListing() {
           }
           return false;
         })
+        .filter((car) => {
+          if (gearbox === "") {
+            return car;
+          } else if (car.transmission.toLowerCase().includes(gearbox.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
+        .filter((car) => {
+          if (bodyType === "") {
+            return car;
+          } else if (car.bodyType.toLowerCase().includes(bodyType.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
+        .filter((car) => {
+          if (colour === "") {
+            return car;
+          } else if (car.colour.toLowerCase().includes(colour.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
+        .filter((car) => {
+          if (fuelType === "") {
+            return car;
+          } else if (car.fuelType.toLowerCase().includes(fuelType.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
+        .filter((car) => {
+          if (doors === "") {
+            return car;
+          } else if (car.doors.toLowerCase().includes(doors.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
+        .filter((car) => {
+          if (seats === "") {
+            return car;
+          } else if (car.seats.toLowerCase().includes(seats.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
+        .filter((car) => {
+          if (engineSize === "") {
+            return car;
+          } else if (car.engineSize.toLowerCase().includes(engineSize.toLowerCase())) {
+            return car;
+          }
+          return false;
+        })
         .slice(0, visible)
         .map((car) => (
           <div className="card w-96 bg-base-100 shadow-xl my-5" key={car._id}>
@@ -142,7 +322,10 @@ function CarListing() {
               <img src={car.imageURL} alt={car.model} className="w-full" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">{car.model}</h2>
+              <h2 className="card-title">
+                {car.make} {car.model}
+              </h2>
+
               <p>Desc: {car.description}</p>
               <p>Price: £{car.price}</p>
               <p>Location: {car.location}</p>
