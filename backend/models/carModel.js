@@ -34,6 +34,7 @@ const carSchema = new mongoose.Schema(
         "Convertible",
         "Supercar",
         "Sports",
+        "Luxury",
         "Pickup",
         "Van",
       ],
@@ -44,19 +45,19 @@ const carSchema = new mongoose.Schema(
       enum: ["Automatic", "Manual"],
     },
     doors: {
-      type: Number,
+      type: String,
       required: [true, "Please add the number of doors"],
       enum: [2, 4, 5, 6],
     },
     seats: {
-      type: Number,
+      type: String,
       required: [true, "Please add the number of seats"],
       enum: [2, 4, 5, 6, 8],
     },
     engineSize: {
-      type: Number,
+      type: String,
       required: [true, "Please add the engine size"],
-      enum: [1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 4.0, 5.0],
+      enum: [1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 4, 5],
     },
     colour: {
       type: String,
