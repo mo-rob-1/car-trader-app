@@ -19,9 +19,9 @@ function CarInfo() {
     return <h3>Loading...</h3>;
   }
 
-  if (isError) {
-    return <h3>Error</h3>;
-  }
+  // if (isError) {
+  //   return <h3>Error - Please Refresh The Page</h3>;
+  // }
 
   return (
     <div className="hero min-h-screen bg-base-200">
