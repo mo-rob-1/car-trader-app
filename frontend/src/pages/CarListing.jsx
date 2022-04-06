@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getAllCars, reset } from "../features/cars/carSlice";
-// import AllCarItem from "../components/AllCarItem";
 import axios from "axios";
 
 function CarListing() {
@@ -75,7 +74,6 @@ function CarListing() {
           setSearch(e.target.value);
         }}
       />
-
       {/* <select
         onChange={(e) => {
           setSearch(e.target.value);
@@ -88,7 +86,6 @@ function CarListing() {
           </option>
         ))}
       </select> */}
-
       <select
         onChange={(e) => {
           setRegion(e.target.value);
@@ -105,7 +102,6 @@ function CarListing() {
         <option value="Wales">Wales</option>
         <option value="Scotland">Scotland</option>
       </select>
-
       <select
         onChange={(e) => {
           setStatus(e.target.value);
@@ -115,7 +111,6 @@ function CarListing() {
         <option value="Sold">Sold</option>
         <option value="Available">Available</option>
       </select>
-
       <select
         onChange={(e) => {
           setColour(e.target.value);
@@ -140,7 +135,6 @@ function CarListing() {
         <option value="Platinum">Platinum</option>
         <option value="Other">Other</option>
       </select>
-
       <select
         onChange={(e) => {
           setBodyType(e.target.value);
@@ -161,7 +155,6 @@ function CarListing() {
         <option value="Pickup">Pickup</option>
         <option value="Van">Van</option>
       </select>
-
       <select
         onChange={(e) => {
           setGearbox(e.target.value);
@@ -171,7 +164,6 @@ function CarListing() {
         <option value="Manual">Manual</option>
         <option value="Automatic">Automatic</option>
       </select>
-
       <select
         onChange={(e) => {
           setFuelType(e.target.value);
@@ -183,7 +175,6 @@ function CarListing() {
         <option value="Electric">Electric</option>
         <option value="Hybrid">Hybrid</option>
       </select>
-
       <select
         onChange={(e) => {
           setDoors(e.target.value);
@@ -195,7 +186,6 @@ function CarListing() {
         <option value="5">5</option>
         <option value="6">6</option>
       </select>
-
       <select
         onChange={(e) => {
           setSeats(e.target.value);
@@ -208,7 +198,6 @@ function CarListing() {
         <option value="6">6</option>
         <option value="8">8</option>
       </select>
-
       <select
         onChange={(e) => {
           setEngineSize(e.target.value);
@@ -229,6 +218,23 @@ function CarListing() {
         <option value="4">4.0 litres</option>
         <option value="5">5.0 litres</option>
       </select>
+      <button
+        className="btn"
+        onClick={() => {
+          setSearch("");
+          setRegion("");
+          setStatus("");
+          setColour("");
+          setBodyType("");
+          setGearbox("");
+          setFuelType("");
+          setDoors("");
+          setSeats("");
+          setEngineSize("");
+        }}
+      >
+        Clear Filter Results
+      </button>
 
       {carList
         .filter((car) => {
@@ -325,7 +331,6 @@ function CarListing() {
               <h2 className="card-title">
                 {car.make} {car.model}
               </h2>
-
               <p>Desc: {car.description}</p>
               <p>Price: £{car.price}</p>
               <p>Location: {car.location}</p>
@@ -340,6 +345,7 @@ function CarListing() {
                   <p className="text-white font-bold">Sold</p>
                 </div>
               )}
+
               <Link to={`/cars/${car._id}`} className="btn">
                 View
               </Link>
