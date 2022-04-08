@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getUserCar, reset } from "../features/cars/carSlice";
+import { getUserCar } from "../features/cars/carSlice";
+import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 
 function CarInfo() {
@@ -10,6 +11,13 @@ function CarInfo() {
 
   const { carId } = useParams();
 
+  const getUrl = window.location.href;
+
+  async function copyToClip() {
+    await navigator.clipboard.writeText(getUrl);
+    toast.success("URL copied to clipboard");
+  }
+
   useEffect(() => {
     dispatch(getUserCar(carId));
     //eslint-disable-next-line
@@ -18,10 +26,6 @@ function CarInfo() {
   if (isLoading) {
     return <h3>Loading...</h3>;
   }
-
-  // if (isError) {
-  //   return <h3>Error - Please Refresh The Page</h3>;
-  // }
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -43,6 +47,9 @@ function CarInfo() {
               <p className="text-white font-bold">Sold</p>
             </div>
           )}
+          <button className="btn" onClick={copyToClip}>
+            Copy URL
+          </button>
         </div>
       </div>
     </div>
