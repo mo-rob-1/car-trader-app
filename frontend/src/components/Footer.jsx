@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div>
+    <div className="text-center pt-3 pb-3">
       <small>
         Coded by <a href="https://mocodes.co.uk/">Mo.</a>
       </small>
