@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import { register, reset } from "../features/auth/authSlice";
 
 function Register() {
@@ -60,77 +61,79 @@ function Register() {
 
   return (
     <>
-      <section>
-        <h1 className="text-3xl font-bold my-5">Register</h1>
-      </section>
+      <div className="hero min-h-screen bg-base-200">
+        <section>
+          <h1 className="text-3xl font-bold text-center">Register</h1>
+          <form className="my-5 card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-8" onSubmit={onSubmit}>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Enter your name:</span>
+              </label>
+              <input
+                type="text"
+                className="input input-bordered w-full max-w-xs"
+                id="name"
+                value={name}
+                name="name"
+                onChange={onChange}
+                required
+              />
+            </div>
 
-      <section>
-        <form className="my-5" onSubmit={onSubmit}>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Enter your name:</span>
-            </label>
-            <input
-              type="text"
-              className="input input-bordered w-full max-w-xs"
-              id="name"
-              value={name}
-              name="name"
-              onChange={onChange}
-              required
-            />
-          </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Enter your email:</span>
+              </label>
+              <input
+                type="email"
+                className="input input-bordered w-full max-w-xs"
+                id="email"
+                value={email}
+                name="email"
+                onChange={onChange}
+                required
+              />
+            </div>
 
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Enter your email:</span>
-            </label>
-            <input
-              type="email"
-              className="input input-bordered w-full max-w-xs"
-              id="email"
-              value={email}
-              name="email"
-              onChange={onChange}
-              required
-            />
-          </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Enter password:</span>
+              </label>
+              <input
+                type="password"
+                className="input input-bordered w-full max-w-xs"
+                id="password"
+                value={password}
+                name="password"
+                onChange={onChange}
+                required
+              />
+            </div>
 
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Enter password:</span>
-            </label>
-            <input
-              type="password"
-              className="input input-bordered w-full max-w-xs"
-              id="password"
-              value={password}
-              name="password"
-              onChange={onChange}
-              required
-            />
-          </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Confirm password:</span>
+              </label>
+              <input
+                type="password"
+                className="input input-bordered w-full max-w-xs"
+                id="password2"
+                value={password2}
+                name="password2"
+                onChange={onChange}
+                required
+              />
+            </div>
 
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Confirm password:</span>
-            </label>
-            <input
-              type="password"
-              className="input input-bordered w-full max-w-xs"
-              id="password2"
-              value={password2}
-              name="password2"
-              onChange={onChange}
-              required
-            />
+            <div className="my-5">
+              <button className="btn btn-primary btn-wide">Register</button>
+            </div>
+          </form>
+          <div className="text-center underline">
+            <Link to="/login">Loign Instead</Link>
           </div>
-
-          <div className="my-5">
-            <button className="btn btn-wide">Submit</button>
-          </div>
-        </form>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
