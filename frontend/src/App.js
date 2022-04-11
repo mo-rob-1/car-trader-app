@@ -3,7 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CarListing from "./pages/CarListing";
 import CarInfo from "./pages/CarInfo";
-import MyCars from "./pages/MyCars";
+import UserProfile from "./pages/UserProfile";
 import Wishlist from "./pages/Wishlist";
 import AddCar from "./pages/AddCar";
 import Register from "./pages/Register";
@@ -24,8 +24,8 @@ function App() {
             <Route path="/add-car" element={<PrivateRoute />}>
               <Route path="/add-car" element={<AddCar />} />
             </Route>
-            <Route path="/mycars" element={<PrivateRoute />}>
-              <Route path="/mycars" element={<MyCars />} />
+            <Route path="/profile" element={<PrivateRoute />}>
+              <Route path="/profile" element={<UserProfile />} />
             </Route>
             <Route path="/wishlist" element={<PrivateRoute />}>
               <Route path="/wishlist" element={<Wishlist />} />
