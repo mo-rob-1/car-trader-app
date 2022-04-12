@@ -270,7 +270,7 @@ function CarListing() {
   };
 
   if (isLoading) {
-    return <h3 className="text-2xl font-bold">Loading...</h3>;
+    return <h3 className="text-2xl font-bold mx-auto max-w-screen-2xl w-11/12 mt-10">Loading...</h3>;
   }
 
   return (
@@ -568,7 +568,7 @@ function CarListing() {
                     ))}
                 </div>
               ) : (
-                <h3 className="text-3xl font-bold">No Cars Available</h3>
+                <h3 className="text-3xl font-bold mt-6">No Cars Available</h3>
               )}
 
               <div className="text-center mt-6">
