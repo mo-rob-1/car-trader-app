@@ -26,20 +26,20 @@ function Header() {
           <>
             <li className="mr-4 md:mr-10">
               <button>
-                <Link to="/add-car" className="font-bold">
+                <Link to="/add-car" className="font-bold hover:underline">
                   Add Car
                 </Link>
               </button>
             </li>
             <li className="mr-4 md:mr-10">
               <button>
-                <Link to="/profile" className="font-bold">
+                <Link to="/profile" className="font-bold hover:underline">
                   Profile
                 </Link>
               </button>
             </li>
             <li>
-              <button onClick={onLogout} className="font-bold">
+              <button onClick={onLogout} className="font-bold hover:underline">
                 Logout
               </button>
             </li>
@@ -48,12 +48,12 @@ function Header() {
           <>
             {" "}
             <li className="mr-4 md:mr-10">
-              <Link to="/login" className="font-bold">
+              <Link to="/login" className="font-bold hover:underline">
                 Login
               </Link>
             </li>
             <li>
-              <Link to="/register" className="font-bold">
+              <Link to="/register" className="font-bold hover:underline">
                 Register
               </Link>
             </li>
