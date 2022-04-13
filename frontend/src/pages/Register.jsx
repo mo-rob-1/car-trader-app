@@ -130,7 +130,7 @@ function Register() {
             </div>
           </form>
           <div className="text-center underline">
-            <Link to="/login">Loign Instead</Link>
+            <Link to="/login">Login Instead</Link>
           </div>
         </section>
       </div>
