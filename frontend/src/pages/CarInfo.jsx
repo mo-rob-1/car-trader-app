@@ -53,7 +53,8 @@ function CarInfo() {
             <h1 className="text-5xl font-bold mb-5">
               {car.make} {car.model}
             </h1>
-            <h2 className="text-2xl font-bold mb-5">£{car.price}</h2>
+
+            <h2 className="text-2xl font-bold mb-5">£{(Math.round(car.price * 100) / 100).toLocaleString()}</h2>
 
             {car.status === "Available" ? (
               <div className="bg-green-600 w-fit px-5 py-3 rounded-md my-3">
@@ -81,7 +82,7 @@ function CarInfo() {
                 <GiGearStickPattern className="mr-2" /> {car.transmission}
               </p>
               <p className="flex items-center text-base font-bold">
-                <FaRoad className="mr-2" /> {car.mileage} Miles
+                <FaRoad className="mr-2" /> {(Math.round(car.mileage * 100) / 100).toLocaleString()} Miles
               </p>
               <p className="flex items-center text-base font-bold">
                 <RiPaintFill className="mr-2" /> {car.colour}

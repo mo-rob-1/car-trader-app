@@ -535,11 +535,12 @@ function CarListing() {
                             <h2 className="card-title">
                               {car.make} {car.model}
                             </h2>
-
                             <p className="font-bold badge mt-2">{car.location}</p>
                             <div className="flex mt-3">
                               <div className="badge  badge-primary font-bold mr-3">{car.fuelType}</div>
-                              <div className="badge badge-primary font-bold mr-3">{car.mileage} Miles</div>
+                              <div className="badge badge-primary font-bold mr-3">
+                                {(Math.round(car.mileage * 100) / 100).toLocaleString()} Miles
+                              </div>
                               <div className="badge badge-primary font-bold">{car.transmission}</div>
                             </div>
                             {car.status === "Available" ? (
@@ -551,8 +552,9 @@ function CarListing() {
                                 <p className="text-white font-bold">Sold</p>
                               </div>
                             )}
-
-                            <p className="mt-3 mb-3 font-bold text-xl">£{car.price}</p>
+                            <p className="mt-3 mb-3 font-bold text-xl">
+                              £{(Math.round(car.price * 100) / 100).toLocaleString()}
+                            </p>
 
                             <Link to={`/cars/${car._id}`} className="btn">
                               View
