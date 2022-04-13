@@ -6,22 +6,6 @@ const Car = require("../models/carModel");
 // @route GET /api/cars
 // @access Private
 const getUserCar = asyncHandler(async (req, res) => {
-  // Get user using the ID in the JWT
-  // const user = await User.findById(req.user.id);
-  // if (!user) {
-  //   res.status(401);
-  //   throw new Error("User not found");
-  // }
-  // const car = await Car.findById(req.params.id);
-  // if (!car) {
-  //   res.status(404);
-  //   throw new Error("Car not found");
-  // }
-  // if (car.user.toString() !== req.user.id) {
-  //   res.status(401);
-  //   throw new Error("Not authorized");
-  // }
-  // res.status(200).json(car);
   const userCar = await Car.findById(req.params.id);
   res.status(200).json(userCar);
 });
@@ -154,24 +138,6 @@ const updateCar = asyncHandler(async (req, res) => {
 // @route DELETE /api/cars/:id
 // @access Private
 const deleteCar = asyncHandler(async (req, res) => {
-  // // Get user using the ID in the JWT
-  // const user = await User.findById(req.user.id);
-  // if (!user) {
-  //   res.status(401);
-  //   throw new Error("User not found");
-  // }
-  // const car = await Car.findById(req.params.id);
-  // if (!car) {
-  //   res.status(404);
-  //   throw new Error("Car not found");
-  // }
-  // if (car.user.toString() !== req.user.id) {
-  //   res.status(401);
-  //   throw new Error("Not authorized");
-  // }
-  // await car.remove();
-  // res.status(200).json({ success: true });
-
   const car = await Car.findById(req.params.id);
 
   if (!car) {

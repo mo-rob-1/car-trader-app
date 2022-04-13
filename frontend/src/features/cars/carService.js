@@ -48,19 +48,6 @@ const getUserCars = async (token) => {
   return response.data;
 };
 
-// // Update a car
-// const updateCar = async (carId, token) => {
-//   const config = {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//     },
-//   };
-
-//   const response = await axios.put(API_URL + carId, config);
-
-//   return response.data;
-// };
-
 // Update car status
 const updateCar = async (carId, token) => {
   const config = {

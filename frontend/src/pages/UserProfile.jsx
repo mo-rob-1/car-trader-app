@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-// import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaUser, FaEnvelope } from "react-icons/fa";
@@ -10,11 +9,7 @@ function UserProfile() {
   const { cars, isLoading, isSuccess } = useSelector((state) => state.car);
   const { user } = useSelector((state) => state.auth);
 
-  // const params = useParams();
-  // const { carId } = useParams();
-
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
 
   useEffect(() => {
     return () => {

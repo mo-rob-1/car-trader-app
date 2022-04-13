@@ -50,15 +50,6 @@ export const getUserCars = createAsyncThunk("cars/getUserCars", async (_, thunkA
 
 // Fetch a car from database
 export const getUserCar = createAsyncThunk("cars/getUserCar", async (carId) => {
-  // try {
-  //   const token = thunkAPI.getState().auth.user.token;
-  //   return await carService.getUserCar(carId, token);
-  // } catch (error) {
-  //   const message =
-  //     (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
-
-  //   return thunkAPI.rejectWithValue(message);
-  // }
   return carService.getUserCar(carId);
 });
 

@@ -277,8 +277,6 @@ function CarListing() {
     <>
       <div className="bg-base-200">
         <div className="mx-auto max-w-screen-2xl w-11/12">
-          {/* <h1 className="text-3xl font-bold">All Cars</h1> */}
-
           <div className="appTwoCol pt-5 pb-5 md:pt-12 md:pb-12 xl:pt-16 xl:pb-16">
             <div>
               <select
@@ -430,10 +428,9 @@ function CarListing() {
               <div className="customInputWrapper">
                 <AiOutlineSearch className="search-icon" />
                 <input
-                  // className="input input-bordered w-full mt-7 md:mt-0 lg:w-6/12"
                   className="customInput"
                   type="text"
-                  placeholder="Search for a car..."
+                  placeholder="Search for a car via make or model..."
                   onChange={(e) => {
                     setSearch(e.target.value);
                   }}
@@ -545,8 +542,6 @@ function CarListing() {
                               <div className="badge badge-primary font-bold mr-3">{car.mileage} Miles</div>
                               <div className="badge badge-primary font-bold">{car.transmission}</div>
                             </div>
-                            {/* <p>Phone: {car.phoneNumber}</p>
-                            <p>Email: {car.email}</p> */}
                             {car.status === "Available" ? (
                               <div className="bg-green-600 w-fit px-5 py-3  my-3 absolute top-0 left-0">
                                 <p className="text-white font-bold">Available</p>
