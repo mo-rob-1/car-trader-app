@@ -25,7 +25,7 @@ function AddCar() {
   const [transmission, setTransmission] = useState("");
   const [mileage, setMileage] = useState(0);
   const [colour, setColour] = useState("");
-  const [engineSize, setEngineSize] = useState(1.0);
+  const [engineSize, setEngineSize] = useState("");
 
   const [fuelTypeOptions] = useState({
     options: ["Petrol", "Diesel", "Hybrid", "Electric"],
@@ -314,7 +314,7 @@ function AddCar() {
                   required
                 >
                   <option value="" disabled>
-                    Add fuel type
+                    Select fuel type
                   </option>
                   {fuelTypeOptions.options.map((option) => (
                     <option key={option} value={option}>
@@ -360,7 +360,7 @@ function AddCar() {
                   required
                 >
                   <option value="" disabled>
-                    Add body type
+                    Select body type
                   </option>
                   {bodyTypeOptions.options.map((option) => (
                     <option key={option} value={option}>
@@ -383,7 +383,7 @@ function AddCar() {
                   required
                 >
                   <option value="" disabled>
-                    Add transmission
+                    Select transmission
                   </option>
                   {gearboxOptions.options.map((option) => (
                     <option key={option} value={option}>
