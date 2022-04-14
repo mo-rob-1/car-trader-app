@@ -264,7 +264,7 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Pick a region:</span>
+                  <span className="label-text">Region:</span>
                 </label>
                 <select
                   className="select select-bordered"
@@ -275,7 +275,7 @@ function AddCar() {
                   required
                 >
                   <option value="" disabled>
-                    Add a region
+                    Select region
                   </option>
                   {regionOptions.options.map((option) => (
                     <option key={option} value={option}>

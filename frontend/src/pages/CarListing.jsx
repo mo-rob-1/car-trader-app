@@ -362,7 +362,7 @@ function CarListing() {
                 onChange={handleChangeDoors}
                 value={doorsOptions.selected}
               >
-                <option value="">Filter by number of Doors</option>
+                <option value="">Filter by Number of Doors</option>
                 {doorsOptions.options?.map((option) => (
                   <option key={option} value={option}>
                     {option}
@@ -375,7 +375,7 @@ function CarListing() {
                 onChange={handleChangeSeats}
                 value={seatsOptions.selected}
               >
-                <option value="">Filter by number of Seats</option>
+                <option value="">Filter by Number of Seats</option>
                 {seatsOptions.options?.map((option) => (
                   <option key={option} value={option}>
                     {option}
