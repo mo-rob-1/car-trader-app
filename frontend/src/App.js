@@ -15,22 +15,20 @@ function App() {
   return (
     <>
       <Router>
-        <div>
-          <Header />
-          <Routes>
-            <Route path="/" element={<CarListing />} />
-            <Route path="/cars/:carId" element={<CarInfo />} />
-            <Route path="/add-car" element={<PrivateRoute />}>
-              <Route path="/add-car" element={<AddCar />} />
-            </Route>
-            <Route path="/profile" element={<PrivateRoute />}>
-              <Route path="/profile" element={<UserProfile />} />
-            </Route>
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-          <Footer />
-        </div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<CarListing />} />
+          <Route path="/cars/:carId" element={<CarInfo />} />
+          <Route path="/add-car" element={<PrivateRoute />}>
+            <Route path="/add-car" element={<AddCar />} />
+          </Route>
+          <Route path="/profile" element={<PrivateRoute />}>
+            <Route path="/profile" element={<UserProfile />} />
+          </Route>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
       </Router>
       <ToastContainer />
     </>
