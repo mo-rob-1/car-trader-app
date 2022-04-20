@@ -1,0 +1,502 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarListing renders the car listing page 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-base-200"
+  >
+    <div
+      class="mx-auto max-w-screen-2xl w-11/12"
+    >
+      <div
+        class="appTwoCol pt-5 pb-5 md:pt-12 md:pb-12 xl:pt-16 xl:pb-16"
+      >
+        <div>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="region-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Region
+            </option>
+            <option
+              value="London"
+            >
+              London
+            </option>
+            <option
+              value="North West"
+            >
+              North West
+            </option>
+            <option
+              value="North East"
+            >
+              North East
+            </option>
+            <option
+              value="Yorkshire"
+            >
+              Yorkshire
+            </option>
+            <option
+              value="Midlands"
+            >
+              Midlands
+            </option>
+            <option
+              value="South East"
+            >
+              South East
+            </option>
+            <option
+              value="South West"
+            >
+              South West
+            </option>
+            <option
+              value="Wales"
+            >
+              Wales
+            </option>
+            <option
+              value="Scotland"
+            >
+              Scotland
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="status-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Status
+            </option>
+            <option
+              value="Available"
+            >
+              Available
+            </option>
+            <option
+              value="Sold"
+            >
+              Sold
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="colour-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Colour
+            </option>
+            <option
+              value="Black"
+            >
+              Black
+            </option>
+            <option
+              value="White"
+            >
+              White
+            </option>
+            <option
+              value="Red"
+            >
+              Red
+            </option>
+            <option
+              value="Blue"
+            >
+              Blue
+            </option>
+            <option
+              value="Green"
+            >
+              Green
+            </option>
+            <option
+              value="Yellow"
+            >
+              Yellow
+            </option>
+            <option
+              value="Purple"
+            >
+              Purple
+            </option>
+            <option
+              value="Orange"
+            >
+              Orange
+            </option>
+            <option
+              value="Pink"
+            >
+              Pink
+            </option>
+            <option
+              value="Brown"
+            >
+              Brown
+            </option>
+            <option
+              value="Grey"
+            >
+              Grey
+            </option>
+            <option
+              value="Silver"
+            >
+              Silver
+            </option>
+            <option
+              value="Gold"
+            >
+              Gold
+            </option>
+            <option
+              value="Bronze"
+            >
+              Bronze
+            </option>
+            <option
+              value="Multicolour"
+            >
+              Multicolour
+            </option>
+            <option
+              value="Platinum"
+            >
+              Platinum
+            </option>
+            <option
+              value="Other"
+            >
+              Other
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="body-type-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Body Type
+            </option>
+            <option
+              value="Sedan"
+            >
+              Sedan
+            </option>
+            <option
+              value="Hatchback"
+            >
+              Hatchback
+            </option>
+            <option
+              value="SUV"
+            >
+              SUV
+            </option>
+            <option
+              value="MPV"
+            >
+              MPV
+            </option>
+            <option
+              value="Coupe"
+            >
+              Coupe
+            </option>
+            <option
+              value="Saloon"
+            >
+              Saloon
+            </option>
+            <option
+              value="Estate"
+            >
+              Estate
+            </option>
+            <option
+              value="Convertible"
+            >
+              Convertible
+            </option>
+            <option
+              value="Supercar"
+            >
+              Supercar
+            </option>
+            <option
+              value="Sports"
+            >
+              Sports
+            </option>
+            <option
+              value="Luxury"
+            >
+              Luxury
+            </option>
+            <option
+              value="Pickup"
+            >
+              Pickup
+            </option>
+            <option
+              value="Van"
+            >
+              Van
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="gearbox-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Gearbox type
+            </option>
+            <option
+              value="Automatic"
+            >
+              Automatic
+            </option>
+            <option
+              value="Manual"
+            >
+              Manual
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="fuel-type-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Fuel Type
+            </option>
+            <option
+              value="Petrol"
+            >
+              Petrol
+            </option>
+            <option
+              value="Diesel"
+            >
+              Diesel
+            </option>
+            <option
+              value="Hybrid"
+            >
+              Hybrid
+            </option>
+            <option
+              value="Electric"
+            >
+              Electric
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="doors-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Number of Doors
+            </option>
+            <option
+              value="2"
+            >
+              2
+            </option>
+            <option
+              value="4"
+            >
+              4
+            </option>
+            <option
+              value="5"
+            >
+              5
+            </option>
+            <option
+              value="6"
+            >
+              6
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="seats-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Number of Seats
+            </option>
+            <option
+              value="2"
+            >
+              2
+            </option>
+            <option
+              value="4"
+            >
+              4
+            </option>
+            <option
+              value="5"
+            >
+              5
+            </option>
+            <option
+              value="6"
+            >
+              6
+            </option>
+            <option
+              value="8"
+            >
+              8
+            </option>
+          </select>
+          <select
+            class="select select-bordered w-full mb-4"
+            data-testid="engine-size-select"
+          >
+            <option
+              value=""
+            >
+              Filter by Engine Size
+            </option>
+            <option
+              value="1"
+            >
+              1 litres
+            </option>
+            <option
+              value="1.2"
+            >
+              1.2 litres
+            </option>
+            <option
+              value="1.4"
+            >
+              1.4 litres
+            </option>
+            <option
+              value="1.6"
+            >
+              1.6 litres
+            </option>
+            <option
+              value="1.8"
+            >
+              1.8 litres
+            </option>
+            <option
+              value="2"
+            >
+              2 litres
+            </option>
+            <option
+              value="2.2"
+            >
+              2.2 litres
+            </option>
+            <option
+              value="2.4"
+            >
+              2.4 litres
+            </option>
+            <option
+              value="2.6"
+            >
+              2.6 litres
+            </option>
+            <option
+              value="2.8"
+            >
+              2.8 litres
+            </option>
+            <option
+              value="3"
+            >
+              3 litres
+            </option>
+            <option
+              value="4"
+            >
+              4 litres
+            </option>
+            <option
+              value="5"
+            >
+              5 litres
+            </option>
+          </select>
+          <button
+            class="btn w-full mb-5"
+            data-testid="clear-filter-btn"
+          >
+            Clear Filter Result
+          </button>
+        </div>
+        <div>
+          <div
+            class="customInputWrapper"
+          >
+            <svg
+              class="search-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+              />
+            </svg>
+            <input
+              class="customInput"
+              data-testid="search-input"
+              placeholder="Search for a car via make or model..."
+              type="text"
+            />
+          </div>
+          <h3
+            class="text-3xl font-bold mt-6"
+          >
+            No Cars Available
+          </h3>
+          <div
+            class="text-center mt-6"
+          >
+            <button
+              class="btn lg:w-1/4"
+              data-testid="load-more-btn"
+            >
+              Load More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

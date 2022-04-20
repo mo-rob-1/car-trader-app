@@ -1,0 +1,836 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCar renders the add car page 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-base-200"
+  >
+    <div
+      class="m-auto w-11/12 max-w-screen-2xl pt-5 pb-5 md:pt-12 md:pb-12"
+    >
+      <section
+        class="mt-6 bg-white p-5 md:p-8 rounded-2xl"
+      >
+        <section
+          class="mb-6"
+        >
+          <h1
+            class="text-3xl font-bold"
+          >
+            Add a car
+          </h1>
+        </section>
+        <form
+          class="grid gap-3"
+        >
+          <div
+            class="md:flex"
+          >
+            <div
+              class="form-control w-full max-w-xs md:mr-5"
+            >
+              <label
+                class="label"
+              >
+                <span
+                  class="label-text"
+                  data-testid="sellers-name-label"
+                >
+                  Seller's Name:
+                </span>
+              </label>
+              <input
+                class="input input-bordered w-full max-w-xs !bg-white"
+                data-testid="sellers-name-input"
+                disabled=""
+                id="name"
+                name="name"
+                value=""
+              />
+            </div>
+            <div
+              class="form-control w-full max-w-xs"
+            >
+              <label
+                class="label"
+              >
+                <span
+                  class="label-text"
+                  data-testid="sellers-email-label"
+                >
+                  Seller's Email Address:
+                </span>
+              </label>
+              <input
+                class="input input-bordered w-full max-w-xs !bg-white"
+                data-testid="sellers-email-input"
+                disabled=""
+                id="email"
+                name="email"
+                value=""
+              />
+            </div>
+          </div>
+          <hr
+            class="mt-4"
+          />
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="contact-number-label"
+              >
+                Seller's Contact Number:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="contact-number-input"
+              id="phoneNumber"
+              name="phoneNumber"
+              required=""
+              value=""
+            />
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="make-label"
+              >
+                Make:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="make-input"
+              id="make"
+              name="make"
+              required=""
+              value=""
+            />
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="model-label"
+              >
+                Model:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="model-input"
+              id="model"
+              name="model"
+              required=""
+              value=""
+            />
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="image-label"
+              >
+                Image URL:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="image-input"
+              id="imageURL"
+              name="imageURL"
+              required=""
+              value=""
+            />
+            <label
+              class="label"
+            >
+              <span
+                class="label-text-alt"
+              >
+                E.g. https://www.domain.com/ford-focus.jpeg
+              </span>
+            </label>
+          </div>
+          <div
+            class="form-control"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="desc-label"
+              >
+                Description:
+              </span>
+            </label>
+            <textarea
+              class="textarea textarea-bordered h-24 lg:w-3/5 xl:w-2/5"
+              data-testid="desc-textarea"
+            />
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="location-label"
+              >
+                Location:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="location-input"
+              id="location"
+              name="location"
+              required=""
+              value=""
+            />
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="region-label"
+              >
+                Region:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="region-select"
+              id="region"
+              name="region"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select region
+              </option>
+              <option
+                value="London"
+              >
+                London
+              </option>
+              <option
+                value="North West"
+              >
+                North West
+              </option>
+              <option
+                value="North East"
+              >
+                North East
+              </option>
+              <option
+                value="Yorkshire"
+              >
+                Yorkshire
+              </option>
+              <option
+                value="Midlands"
+              >
+                Midlands
+              </option>
+              <option
+                value="South East"
+              >
+                South East
+              </option>
+              <option
+                value="South West"
+              >
+                South West
+              </option>
+              <option
+                value="Wales"
+              >
+                Wales
+              </option>
+              <option
+                value="Scotland"
+              >
+                Scotland
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="mileage-label"
+              >
+                Mileage:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="mileage-input"
+              id="mileage"
+              name="mileage"
+              required=""
+              step="1"
+              type="number"
+              value="0"
+            />
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="fuel-type-label"
+              >
+                Fuel Type:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="fuel-type-select"
+              id="fuelType"
+              name="fuelType"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select fuel type
+              </option>
+              <option
+                value="Petrol"
+              >
+                Petrol
+              </option>
+              <option
+                value="Diesel"
+              >
+                Diesel
+              </option>
+              <option
+                value="Hybrid"
+              >
+                Hybrid
+              </option>
+              <option
+                value="Electric"
+              >
+                Electric
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="engine-size-label"
+              >
+                Engine Size:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="engine-size-select"
+              id="engineSize"
+              name="engineSize"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select the engine size
+              </option>
+              <option
+                value="1"
+              >
+                1 litres
+              </option>
+              <option
+                value="1.2"
+              >
+                1.2 litres
+              </option>
+              <option
+                value="1.4"
+              >
+                1.4 litres
+              </option>
+              <option
+                value="1.6"
+              >
+                1.6 litres
+              </option>
+              <option
+                value="1.8"
+              >
+                1.8 litres
+              </option>
+              <option
+                value="2"
+              >
+                2 litres
+              </option>
+              <option
+                value="2.2"
+              >
+                2.2 litres
+              </option>
+              <option
+                value="2.4"
+              >
+                2.4 litres
+              </option>
+              <option
+                value="2.6"
+              >
+                2.6 litres
+              </option>
+              <option
+                value="2.8"
+              >
+                2.8 litres
+              </option>
+              <option
+                value="3"
+              >
+                3 litres
+              </option>
+              <option
+                value="4"
+              >
+                4 litres
+              </option>
+              <option
+                value="5"
+              >
+                5 litres
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="body-type-label"
+              >
+                Body Type:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="body-type-select"
+              id="bodyType"
+              name="bodyType"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select body type
+              </option>
+              <option
+                value="Sedan"
+              >
+                Sedan
+              </option>
+              <option
+                value="Hatchback"
+              >
+                Hatchback
+              </option>
+              <option
+                value="SUV"
+              >
+                SUV
+              </option>
+              <option
+                value="MPV"
+              >
+                MPV
+              </option>
+              <option
+                value="Coupe"
+              >
+                Coupe
+              </option>
+              <option
+                value="Saloon"
+              >
+                Saloon
+              </option>
+              <option
+                value="Estate"
+              >
+                Estate
+              </option>
+              <option
+                value="Convertible"
+              >
+                Convertible
+              </option>
+              <option
+                value="Supercar"
+              >
+                Supercar
+              </option>
+              <option
+                value="Sports"
+              >
+                Sports
+              </option>
+              <option
+                value="Luxury"
+              >
+                Luxury
+              </option>
+              <option
+                value="Pickup"
+              >
+                Pickup
+              </option>
+              <option
+                value="Van"
+              >
+                Van
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="transmission-label"
+              >
+                Transmission:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="transmission-select"
+              id="transmission"
+              name="transmission"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select transmission
+              </option>
+              <option
+                value="Automatic"
+              >
+                Automatic
+              </option>
+              <option
+                value="Manual"
+              >
+                Manual
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="colour-label"
+              >
+                Colour:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="colour-select"
+              id="colour"
+              name="colour"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select colour
+              </option>
+              <option
+                value="Black"
+              >
+                Black
+              </option>
+              <option
+                value="White"
+              >
+                White
+              </option>
+              <option
+                value="Red"
+              >
+                Red
+              </option>
+              <option
+                value="Blue"
+              >
+                Blue
+              </option>
+              <option
+                value="Green"
+              >
+                Green
+              </option>
+              <option
+                value="Yellow"
+              >
+                Yellow
+              </option>
+              <option
+                value="Purple"
+              >
+                Purple
+              </option>
+              <option
+                value="Orange"
+              >
+                Orange
+              </option>
+              <option
+                value="Pink"
+              >
+                Pink
+              </option>
+              <option
+                value="Brown"
+              >
+                Brown
+              </option>
+              <option
+                value="Grey"
+              >
+                Grey
+              </option>
+              <option
+                value="Silver"
+              >
+                Silver
+              </option>
+              <option
+                value="Gold"
+              >
+                Gold
+              </option>
+              <option
+                value="Bronze"
+              >
+                Bronze
+              </option>
+              <option
+                value="Multicolour"
+              >
+                Multicolour
+              </option>
+              <option
+                value="Platinum"
+              >
+                Platinum
+              </option>
+              <option
+                value="Other"
+              >
+                Other
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="number-of-doors-label"
+              >
+                Number of doors:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="number-of-doors-select"
+              id="doors"
+              name="doors"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select number of doors
+              </option>
+              <option
+                value="2"
+              >
+                2
+              </option>
+              <option
+                value="4"
+              >
+                4
+              </option>
+              <option
+                value="5"
+              >
+                5
+              </option>
+              <option
+                value="6"
+              >
+                6
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="number-of-seats-label"
+              >
+                Number of seats:
+              </span>
+            </label>
+            <select
+              class="select select-bordered"
+              data-testid="number-of-seats-select"
+              id="seats"
+              name="seats"
+              required=""
+            >
+              <option
+                disabled=""
+                value=""
+              >
+                Select number of seats
+              </option>
+              <option
+                value="2"
+              >
+                2
+              </option>
+              <option
+                value="4"
+              >
+                4
+              </option>
+              <option
+                value="5"
+              >
+                5
+              </option>
+              <option
+                value="6"
+              >
+                6
+              </option>
+              <option
+                value="8"
+              >
+                8
+              </option>
+            </select>
+          </div>
+          <div
+            class="form-control w-full max-w-xs"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text"
+                data-testid="price-label"
+              >
+                Price:
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full max-w-xs"
+              data-testid="price-input"
+              id="price"
+              name="price"
+              required=""
+              step="0.01"
+              type="number"
+              value="0"
+            />
+          </div>
+          <div
+            class="mt-3"
+          >
+            <button
+              class="btn"
+              data-testid="submit-button"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;

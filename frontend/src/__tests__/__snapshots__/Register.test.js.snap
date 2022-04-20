@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders the register page 1`] = `
+<DocumentFragment>
+  <div
+    class="hero min-h-screen bg-base-200"
+  >
+    <section>
+      <h1
+        class="text-3xl font-bold text-center"
+      >
+        Register
+      </h1>
+      <form
+        class="my-5 card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-8"
+      >
+        <div
+          class="form-control w-full max-w-xs"
+        >
+          <label
+            class="label"
+          >
+            <span
+              class="label-text"
+            >
+              Enter your name:
+            </span>
+          </label>
+          <input
+            class="input input-bordered w-full max-w-xs"
+            data-testid="name-input"
+            id="name"
+            name="name"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="form-control w-full max-w-xs"
+        >
+          <label
+            class="label"
+          >
+            <span
+              class="label-text"
+            >
+              Enter your email address:
+            </span>
+          </label>
+          <input
+            class="input input-bordered w-full max-w-xs"
+            data-testid="email-input"
+            id="email"
+            name="email"
+            required=""
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          class="form-control w-full max-w-xs"
+        >
+          <label
+            class="label"
+          >
+            <span
+              class="label-text"
+            >
+              Enter password:
+            </span>
+          </label>
+          <input
+            class="input input-bordered w-full max-w-xs"
+            data-testid="password-input"
+            id="password"
+            name="password"
+            required=""
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          class="form-control w-full max-w-xs"
+        >
+          <label
+            class="label"
+          >
+            <span
+              class="label-text"
+            >
+              Confirm password:
+            </span>
+          </label>
+          <input
+            class="input input-bordered w-full max-w-xs"
+            data-testid="confirm-password-input"
+            id="password2"
+            name="password2"
+            required=""
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          class="my-5"
+        >
+          <button
+            class="btn btn-primary btn-wide"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+      <div
+        class="text-center underline"
+      >
+        <a
+          href="/login"
+        >
+          Login Instead
+        </a>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
