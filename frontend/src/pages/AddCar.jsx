@@ -8,8 +8,8 @@ function AddCar() {
   const { user } = useSelector((state) => state.auth);
   const { isLoading, isError, isSuccess, message } = useSelector((state) => state.car);
 
-  const [name] = useState(user.name);
-  const [email] = useState(user.email);
+  const [name] = useState(user?.name);
+  const [email] = useState(user?.email);
   const [model, setModel] = useState("");
   const [price, setPrice] = useState(0);
   const [doors, setDoors] = useState("");
@@ -104,7 +104,7 @@ function AddCar() {
 
     if (isSuccess) {
       dispatch(reset());
-      navigate("/");
+      navigate("/profile");
     }
 
     dispatch(reset());
@@ -151,9 +151,12 @@ function AddCar() {
               <div className="md:flex">
                 <div className="form-control w-full max-w-xs md:mr-5">
                   <label className="label">
-                    <span className="label-text">Seller's Name:</span>
+                    <span className="label-text" data-testid="sellers-name-label">
+                      Seller's Name:
+                    </span>
                   </label>
                   <input
+                    data-testid="sellers-name-input"
                     className="input input-bordered w-full max-w-xs !bg-white"
                     id="name"
                     value={name}
@@ -164,9 +167,12 @@ function AddCar() {
 
                 <div className="form-control w-full max-w-xs">
                   <label className="label">
-                    <span className="label-text">Seller's Email Address:</span>
+                    <span className="label-text" data-testid="sellers-email-label">
+                      Seller's Email Address:
+                    </span>
                   </label>
                   <input
+                    data-testid="sellers-email-input"
                     className="input input-bordered w-full max-w-xs !bg-white"
                     id="email"
                     value={email}
@@ -180,10 +186,13 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Seller's Contact Number:</span>
+                  <span className="label-text" data-testid="contact-number-label">
+                    Seller's Contact Number:
+                  </span>
                 </label>
                 <input
                   className="input input-bordered w-full max-w-xs"
+                  data-testid="contact-number-input"
                   id="phoneNumber"
                   name="phoneNumber"
                   value={phoneNumber}
@@ -194,9 +203,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Make:</span>
+                  <span className="label-text" data-testid="make-label">
+                    Make:
+                  </span>
                 </label>
                 <input
+                  data-testid="make-input"
                   className="input input-bordered w-full max-w-xs"
                   id="make"
                   name="make"
@@ -208,9 +220,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Model:</span>
+                  <span className="label-text" data-testid="model-label">
+                    Model:
+                  </span>
                 </label>
                 <input
+                  data-testid="model-input"
                   className="input input-bordered w-full max-w-xs"
                   id="model"
                   name="model"
@@ -222,9 +237,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Image URL:</span>
+                  <span className="label-text" data-testid="image-label">
+                    Image URL:
+                  </span>
                 </label>
                 <input
+                  data-testid="image-input"
                   className="input input-bordered w-full max-w-xs"
                   id="imageURL"
                   name="imageURL"
@@ -239,9 +257,12 @@ function AddCar() {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Description:</span>
+                  <span className="label-text" data-testid="desc-label">
+                    Description:
+                  </span>
                 </label>
                 <textarea
+                  data-testid="desc-textarea"
                   className="textarea textarea-bordered h-24 lg:w-3/5 xl:w-2/5"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
@@ -250,9 +271,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Location:</span>
+                  <span className="label-text" data-testid="location-label">
+                    Location:
+                  </span>
                 </label>
                 <input
+                  data-testid="location-input"
                   className="input input-bordered w-full max-w-xs"
                   id="location"
                   name="location"
@@ -264,9 +288,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Region:</span>
+                  <span className="label-text" data-testid="region-label">
+                    Region:
+                  </span>
                 </label>
                 <select
+                  data-testid="region-select"
                   className="select select-bordered"
                   id="region"
                   name="region"
@@ -287,9 +314,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Mileage:</span>
+                  <span className="label-text" data-testid="mileage-label">
+                    Mileage:
+                  </span>
                 </label>
                 <input
+                  data-testid="mileage-input"
                   className="input input-bordered w-full max-w-xs"
                   type="number"
                   step="1"
@@ -303,9 +333,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Fuel Type:</span>
+                  <span className="label-text" data-testid="fuel-type-label">
+                    Fuel Type:
+                  </span>
                 </label>
                 <select
+                  data-testid="fuel-type-select"
                   className="select select-bordered"
                   id="fuelType"
                   name="fuelType"
@@ -326,9 +359,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Engine Size:</span>
+                  <span className="label-text" data-testid="engine-size-label">
+                    Engine Size:
+                  </span>
                 </label>
                 <select
+                  data-testid="engine-size-select"
                   className="select select-bordered"
                   id="engineSize"
                   name="engineSize"
@@ -349,9 +385,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Body Type:</span>
+                  <span className="label-text" data-testid="body-type-label">
+                    Body Type:
+                  </span>
                 </label>
                 <select
+                  data-testid="body-type-select"
                   className="select select-bordered"
                   id="bodyType"
                   name="bodyType"
@@ -372,9 +411,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Transmission:</span>
+                  <span className="label-text" data-testid="transmission-label">
+                    Transmission:
+                  </span>
                 </label>
                 <select
+                  data-testid="transmission-select"
                   className="select select-bordered"
                   id="transmission"
                   name="transmission"
@@ -395,9 +437,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Colour:</span>
+                  <span className="label-text" data-testid="colour-label">
+                    Colour:
+                  </span>
                 </label>
                 <select
+                  data-testid="colour-select"
                   className="select select-bordered"
                   id="colour"
                   name="colour"
@@ -418,9 +463,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Number of doors:</span>
+                  <span className="label-text" data-testid="number-of-doors-label">
+                    Number of doors:
+                  </span>
                 </label>
                 <select
+                  data-testid="number-of-doors-select"
                   className="select select-bordered"
                   id="doors"
                   name="doors"
@@ -441,9 +489,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Number of seats:</span>
+                  <span className="label-text" data-testid="number-of-seats-label">
+                    Number of seats:
+                  </span>
                 </label>
                 <select
+                  data-testid="number-of-seats-select"
                   className="select select-bordered"
                   id="seats"
                   name="seats"
@@ -464,9 +515,12 @@ function AddCar() {
 
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Price:</span>
+                  <span className="label-text" data-testid="price-label">
+                    Price:
+                  </span>
                 </label>
                 <input
+                  data-testid="price-input"
                   className="input input-bordered w-full max-w-xs"
                   type="number"
                   step="0.01"
@@ -479,7 +533,9 @@ function AddCar() {
               </div>
 
               <div className="mt-3">
-                <button className="btn">Submit</button>
+                <button className="btn" data-testid="submit-button">
+                  Submit
+                </button>
               </div>
             </form>
           </section>

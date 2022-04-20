@@ -283,6 +283,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeRegion}
                 value={regionOptions.selected}
+                data-testid="region-select"
               >
                 <option value="">Filter by Region</option>
                 {regionOptions.options?.map((option) => (
@@ -296,6 +297,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeStatus}
                 value={statusOptions.selected}
+                data-testid="status-select"
               >
                 <option value="">Filter by Status</option>
                 {statusOptions.options?.map((option) => (
@@ -309,6 +311,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeColour}
                 value={colourOptions.selected}
+                data-testid="colour-select"
               >
                 <option value="">Filter by Colour</option>
                 {colourOptions.options?.map((option) => (
@@ -322,6 +325,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeBodyType}
                 value={bodyTypeOptions.selected}
+                data-testid="body-type-select"
               >
                 <option value="">Filter by Body Type</option>
                 {bodyTypeOptions.options?.map((option) => (
@@ -335,6 +339,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeGearbox}
                 value={gearboxOptions.selected}
+                data-testid="gearbox-select"
               >
                 <option value="">Filter by Gearbox type</option>
                 {gearboxOptions.options?.map((option) => (
@@ -348,6 +353,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeFuelType}
                 value={fuelTypeOptions.selected}
+                data-testid="fuel-type-select"
               >
                 <option value="">Filter by Fuel Type</option>
                 {fuelTypeOptions.options?.map((option) => (
@@ -361,6 +367,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeDoors}
                 value={doorsOptions.selected}
+                data-testid="doors-select"
               >
                 <option value="">Filter by Number of Doors</option>
                 {doorsOptions.options?.map((option) => (
@@ -374,6 +381,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeSeats}
                 value={seatsOptions.selected}
+                data-testid="seats-select"
               >
                 <option value="">Filter by Number of Seats</option>
                 {seatsOptions.options?.map((option) => (
@@ -387,6 +395,7 @@ function CarListing() {
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeEngineSize}
                 value={engineSizeOptions.selected}
+                data-testid="engine-size-select"
               >
                 <option value="">Filter by Engine Size</option>
                 {engineSizeOptions.options?.map((option) => (
@@ -398,6 +407,7 @@ function CarListing() {
 
               <button
                 className="btn w-full mb-5"
+                data-testid="clear-filter-btn"
                 onClick={() => {
                   setSearch("");
                   setRegion("");
@@ -428,6 +438,7 @@ function CarListing() {
               <div className="customInputWrapper">
                 <AiOutlineSearch className="search-icon" />
                 <input
+                  data-testid="search-input"
                   className="customInput"
                   type="text"
                   placeholder="Search for a car via make or model..."
@@ -569,7 +580,7 @@ function CarListing() {
               )}
 
               <div className="text-center mt-6">
-                <button className="btn lg:w-1/4" onClick={showMoreItems}>
+                <button className="btn lg:w-1/4" onClick={showMoreItems} data-testid="load-more-btn">
                   Load More
                 </button>
               </div>

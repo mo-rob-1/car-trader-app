@@ -37,9 +37,9 @@ function CarInfo() {
   return (
     <>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content lg:gap-12 flex-col lg:flex-row lg:mt-12 lg:mb-10 xl:mt-0 xl:mb-0">
+        <div className="hero-content lg:gap-12 flex-col lg:flex-row lg:mt-12 lg:mb-10 xl:mt-0 xl:mb-0 w-full">
           <img src={car.imageURL} alt={car.model} className="w-full max-w-sm rounded-lg shadow-2xl my-5" />
-          <div>
+          <div className="w-full">
             <div className="flex justify-between">
               <Link className="btn mb-10" to="/">
                 <BsArrowLeft className="mr-2" /> Back

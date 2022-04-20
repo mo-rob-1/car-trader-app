@@ -65,6 +65,7 @@ function Login() {
               </label>
               <input
                 type="email"
+                data-testid="email-input"
                 className="input input-bordered w-full max-w-xs"
                 id="email"
                 value={email}
@@ -80,6 +81,7 @@ function Login() {
               </label>
               <input
                 type="password"
+                data-testid="password-input"
                 className="input input-bordered w-full max-w-xs"
                 id="password"
                 value={password}

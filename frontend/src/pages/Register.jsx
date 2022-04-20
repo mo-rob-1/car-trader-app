@@ -71,6 +71,7 @@ function Register() {
               </label>
               <input
                 type="text"
+                data-testid="name-input"
                 className="input input-bordered w-full max-w-xs"
                 id="name"
                 value={name}
@@ -82,10 +83,11 @@ function Register() {
 
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text">Enter your email:</span>
+                <span className="label-text">Enter your email address:</span>
               </label>
               <input
                 type="email"
+                data-testid="email-input"
                 className="input input-bordered w-full max-w-xs"
                 id="email"
                 value={email}
@@ -101,6 +103,7 @@ function Register() {
               </label>
               <input
                 type="password"
+                data-testid="password-input"
                 className="input input-bordered w-full max-w-xs"
                 id="password"
                 value={password}
@@ -116,6 +119,7 @@ function Register() {
               </label>
               <input
                 type="password"
+                data-testid="confirm-password-input"
                 className="input input-bordered w-full max-w-xs"
                 id="password2"
                 value={password2}

@@ -35,13 +35,13 @@ function UserProfile() {
             <h1 className="text-3xl font-bold mb-5">My Profile</h1>
             <hr className="mb-5"></hr>
             <h2 className="text-2xl font-bold flex items-center">
-              <FaUser className="mr-2" /> {user.name}
+              <FaUser className="mr-2" /> {user?.name}
             </h2>
             <h3 className="text-2xl font-bold flex items-center mt-4">
-              <FaEnvelope className="mr-2" /> {user.email}
+              <FaEnvelope className="mr-2" /> {user?.email}
             </h3>
           </div>
-          <h1 className="text-3xl font-bold mt-10">{user.name}'s Cars:</h1>
+          <h1 className="text-3xl font-bold mt-10">{user?.name}'s Cars:</h1>
           {cars.length > 0 ? (
             <div className="carWrapper xl:mt-2">
               {cars.map((car) => (
