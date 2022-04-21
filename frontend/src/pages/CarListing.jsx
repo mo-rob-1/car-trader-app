@@ -269,6 +269,10 @@ function CarListing() {
     setVisible((prevVisible) => prevVisible + 3);
   };
 
+  const totalCars = carList.length;
+  const availableCars = carList.filter((car) => car.status === "Available").length;
+  const soldCars = carList.filter((car) => car.status === "Sold").length;
+
   if (isLoading) {
     return <h3 className="text-2xl font-bold mx-auto max-w-screen-2xl w-11/12 mt-10">Loading...</h3>;
   }
@@ -279,6 +283,11 @@ function CarListing() {
         <div className="mx-auto max-w-screen-2xl w-11/12">
           <div className="appTwoCol pt-5 pb-5 md:pt-12 md:pb-12 xl:pt-16 xl:pb-16">
             <div>
+              <div className="flex flex-col mb-6">
+                <div className="badge mb-4 font-bold">Total Cars: {totalCars}</div>
+                <div className="badge mb-4 font-bold">Available Cars: {availableCars}</div>
+                <div className="badge font-bold">Sold Cars: {soldCars}</div>
+              </div>
               <select
                 className="select select-bordered w-full mb-4"
                 onChange={handleChangeRegion}
