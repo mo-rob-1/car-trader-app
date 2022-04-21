@@ -8,6 +8,8 @@ function AddCar() {
   const { user } = useSelector((state) => state.auth);
   const { isLoading, isError, isSuccess, message } = useSelector((state) => state.car);
 
+  const [count, getCount] = useState(0);
+
   const [name] = useState(user?.name);
   const [email] = useState(user?.email);
   const [model, setModel] = useState("");
@@ -104,7 +106,7 @@ function AddCar() {
 
     if (isSuccess) {
       dispatch(reset());
-      navigate("/profile");
+      navigate("/");
     }
 
     dispatch(reset());
@@ -133,6 +135,11 @@ function AddCar() {
         engineSize,
       })
     );
+  };
+
+  // Character counter
+  const keyhandler = (e) => {
+    getCount(e.target.value.length);
   };
 
   if (isLoading) {
@@ -263,10 +270,15 @@ function AddCar() {
                 </label>
                 <textarea
                   data-testid="desc-textarea"
+                  maxlength="2000"
+                  onKeyUp={(e) => keyhandler(e)}
                   className="textarea textarea-bordered h-24 lg:w-3/5 xl:w-2/5"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
+                <label class="label">
+                  <span class="label-text-alt">Max 2000 characters - {count} / 2000</span>
+                </label>
               </div>
 
               <div className="form-control w-full max-w-xs">
