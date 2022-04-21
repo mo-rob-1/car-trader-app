@@ -187,7 +187,17 @@ exports[`AddCar renders the add car page 1`] = `
             <textarea
               class="textarea textarea-bordered h-24 lg:w-3/5 xl:w-2/5"
               data-testid="desc-textarea"
+              maxlength="2000"
             />
+            <label
+              class="label"
+            >
+              <span
+                class="label-text-alt"
+              >
+                Max 2000 characters - 0 / 2000
+              </span>
+            </label>
           </div>
           <div
             class="form-control w-full max-w-xs"

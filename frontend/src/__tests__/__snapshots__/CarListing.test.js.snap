@@ -12,6 +12,25 @@ exports[`CarListing renders the car listing page 1`] = `
         class="appTwoCol pt-5 pb-5 md:pt-12 md:pb-12 xl:pt-16 xl:pb-16"
       >
         <div>
+          <div
+            class="flex flex-col mb-6"
+          >
+            <div
+              class="badge mb-4 font-bold"
+            >
+              Total Cars: 0
+            </div>
+            <div
+              class="badge mb-4 font-bold"
+            >
+              Available Cars: 0
+            </div>
+            <div
+              class="badge font-bold"
+            >
+              Sold Cars: 0
+            </div>
+          </div>
           <select
             class="select select-bordered w-full mb-4"
             data-testid="region-select"
