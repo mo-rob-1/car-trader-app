@@ -55,7 +55,7 @@ function UserProfile() {
                       {car.make} {car.model}
                     </h2>
                     <p className="font-bold badge mt-2">{car.location}</p>
-                    <div className="flex mt-3">
+                    <div className="mt-3">
                       <div className="badge  badge-primary font-bold mr-3">{car.fuelType}</div>
                       <div className="badge badge-primary font-bold mr-3">
                         {(Math.round(car.mileage * 100) / 100).toLocaleString()} Miles
