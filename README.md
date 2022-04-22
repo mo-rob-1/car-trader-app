@@ -2,15 +2,17 @@
 
 A car trader app built using the MERN stack.
 
-This app allows user to:
+This app has CRUD operations and allows users to:
 
-- View cars for sale
+- View the listing page
 - Search for a car via make or model
-- Filter by various options e.g. colour, fuel type, car body type etc
-- Register an account if they want to add a car to sell
-- Delete or mark their car as sold
+- View car details
+- Filter the cars E.g. colour, fuel type, car body type etc
+- Register an account or login (Credentials stored in MongoDB)
+- Add a car (Authenticated users only)
+- Delete or mark their car as sold from the profile page
 
-The cars are stored in a MongoDB database with Express AND NodeJS being used to power the application backend. React along with Tailwing was used to build and style the frontend. HTTP requests are from the frontend using Axios and Redux was used
+The cars are stored in MongoDB with Express and Node.js being used to power the backend. React & Redux along with Tailwind was used to build and style the frontend. HTTP requests are made from the frontend using Axios. The React Testing Library was also used to test the pages and components of the application.
 
 ![GIF showing the Car Trader App](frontend/src/images/car-trader-app.gif)
 
@@ -22,6 +24,16 @@ The cars are stored in a MongoDB database with Express AND NodeJS being used to 
 - [Future development plans](#features-for-future-development)
 - [Contact](#contact)
 
+## Screenshots
+
+![Screenshot of Car Trader app - Listing Page](frontend/src/images/screenshot-one.PNG)
+
+![Screenshot of Car Trader app - Add Car Page](frontend/src/images/screenshot-two.PNG)
+
+![Screenshot of Car Trader app - Car Info Page](frontend/src/images/screenshot-three.PNG)
+
+![Screenshot of Car Trader app - User Profile Page](frontend/src/images/screenshot-four.PNG)
+
 ## Technologies
 
 - React
@@ -29,7 +41,7 @@ The cars are stored in a MongoDB database with Express AND NodeJS being used to 
 - Redux
 - Axios
 - MongoDB
-- NodeJS and NPM
+- Node.js and NPM
 - Express
 - Tailwind
 - Postman
@@ -42,7 +54,7 @@ The cars are stored in a MongoDB database with Express AND NodeJS being used to 
 
 ## Future development plans
 
-- Allow registered users to add cars to a wishlist page
+- Allow authenticated users to add cars to a wishlist page
 
 ## Contact
 
