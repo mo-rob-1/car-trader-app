@@ -22,7 +22,7 @@ function CarInfo() {
 
   async function copyToClip() {
     await navigator.clipboard.writeText(getUrl);
-    toast.success("URL copied to clipboard");
+    toast.success("Link copied");
   }
 
   useEffect(() => {
@@ -46,7 +46,7 @@ function CarInfo() {
               </Link>
 
               <button className="btn" onClick={copyToClip}>
-                <BsShareFill className="mr-2" /> Share URL
+                <BsShareFill className="mr-2" /> Share Link
               </button>
             </div>
 
