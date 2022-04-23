@@ -350,7 +350,7 @@ function CarListing() {
                 value={gearboxOptions.selected}
                 data-testid="gearbox-select"
               >
-                <option value="">Filter by Gearbox type</option>
+                <option value="">Filter by Gearbox Type</option>
                 {gearboxOptions.options?.map((option) => (
                   <option key={option} value={option}>
                     {option}
