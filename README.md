@@ -52,7 +52,7 @@ The cars are stored in MongoDB with Express and Node.js being used to power the 
 
 - JavaScript
 
-## Features-for-future-development
+## Features for future development
 
 - Allow authenticated users to add cars to a wishlist page
 
