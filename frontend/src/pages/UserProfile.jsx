@@ -48,7 +48,7 @@ function UserProfile() {
                 <div className="card bg-base-100 shadow-xl my-5 relative" key={car._id}>
                   <figure>
                     {" "}
-                    <img src={car.imageURL} alt={car.model} className="w-full" />
+                    <img src={car.imageURL} alt={car.model} className="w-full h-80 object-cover" />
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title">

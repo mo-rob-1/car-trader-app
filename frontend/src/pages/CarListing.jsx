@@ -549,7 +549,7 @@ function CarListing() {
                         <div className="card shadow-xl my-5 relative">
                           <figure>
                             {" "}
-                            <img src={car.imageURL} alt={car.model} className="w-full" />
+                            <img src={car.imageURL} alt={car.model} className="w-full h-60 object-cover" />
                           </figure>
                           <div className="card-body">
                             <h2 className="card-title">
