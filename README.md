@@ -10,7 +10,7 @@ This app has CRUD operations and allows users to:
 - Filter the cars E.g. colour, fuel type, car body type etc
 - Register an account or login (Credentials stored in MongoDB)
 - Add a car (Authenticated users only)
-- Delete or mark their car as sold from the profile page
+- Delete or mark their car as 'sold'
 
 The cars are stored in MongoDB with Express and Node.js being used to power the backend. React & Redux along with Tailwind was used to build and style the frontend. HTTP requests are made from the frontend using Axios. The React Testing Library was also used to test the pages and components of the application.
 
