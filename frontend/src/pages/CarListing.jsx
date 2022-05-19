@@ -244,7 +244,7 @@ function CarListing() {
     axios
       .get(API_URL)
       .then((res) => {
-        setCarList(res.data);
+        setCarList(res.data.reverse());
       })
       .catch((err) => {
         console.log(err);
